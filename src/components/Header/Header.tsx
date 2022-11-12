@@ -26,6 +26,7 @@ const Header: FunctionComponent<Props> = () => {
             zIndex: 10,
         })
     };
+    
     return (
         <header className={styles.root}>
             <div className={styles.wrapper}>
