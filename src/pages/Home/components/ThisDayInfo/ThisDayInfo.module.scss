@@ -7,7 +7,7 @@
     width: 100%;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-    background-color: $light-background;
+    background-color: var(#{--components-background-default});
 }
 
 .items {
@@ -52,7 +52,7 @@
 }
 
 .value {
-    color: $light-color;
+    color: var(#{--text-color-default});
 }
 
 .cloud {
