@@ -1,10 +1,13 @@
 import { FunctionComponent } from 'react';
 import cloud from '../../../../assets/images/cloud.png';
 import ThisDayItem from './ThisDayItem';
+import { Weather } from '../../../../store/weather/types';
 
 import styles from './ThisDayInfo.module.scss';
 
-interface Props {}
+interface Props {
+  weather: Partial<Weather>;
+}
 
 export interface Item {
   icon_id: string;
@@ -12,7 +15,7 @@ export interface Item {
   weather_value: string;
 }
 
-const ThisDayInfo: FunctionComponent<Props> = ({}) => {
+const ThisDayInfo: FunctionComponent<Props> = ({ weather }) => {
   const items = [{
     icon_id: 'temp',
     weather_name: 'Температура',

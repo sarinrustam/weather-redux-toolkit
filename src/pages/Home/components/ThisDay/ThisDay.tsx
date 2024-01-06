@@ -2,10 +2,10 @@ import { FunctionComponent } from 'react';
 
 import styles from './ThisDay.module.scss';
 import GlobalSvgSelector from '../../../../assets/icons/global/GlobalSvgSelector';
-import { Weather } from '../../../../store/types/types';
+import { Weather } from '../../../../store/weather/types';
 
 interface Props {
-    weather: Weather;
+    weather: Partial<Weather>;
 }
 
 const ThisDay: FunctionComponent<Props> = ({ weather }) => {
@@ -18,7 +18,7 @@ const ThisDay: FunctionComponent<Props> = ({ weather }) => {
         <header className={styles.root}>
             <div className={styles.top}>
                 <div className={styles.wrapper}>
-                    <span className={styles.temperature}>{Math.round(weather.main?.temp)}ºC</span>
+                    <span className={styles.temperature}>{weather.main?.temp && Math.round(weather.main.temp)}ºC</span>
                     <span className={styles.day}>Сегодня</span>
                 </div>
                 <GlobalSvgSelector id='sun-icon' />
@@ -32,7 +32,7 @@ const ThisDay: FunctionComponent<Props> = ({ weather }) => {
                 <div className={styles.city}>
                     Город:
                     {' '}
-                    <span>Moscow</span>
+                    <span>{weather?.name}</span>
                 </div>
             </div>
         </header>

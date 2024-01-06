@@ -7,14 +7,14 @@ interface Props {}
 const Tabs: FunctionComponent<Props> = (props) => {
   const tabs = [
     {
-      value: 'На неделю',
+      value: 'На 3 следующих дня',
     },
-    {
-      value: 'На 10 дней',
-    },
-    {
-      value: 'На месяц',
-    }
+    // {
+    //   value: 'На 10 дней',
+    // },
+    // {
+    //   value: 'На месяц',
+    // }
   ]
   return (
     <div className={styles.tabs}>

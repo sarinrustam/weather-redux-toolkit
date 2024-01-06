@@ -5,7 +5,7 @@ const api = axios.create({
 });
 
 api.interceptors.request.use(config => {
-    config.url = config.url + '&units=metric' + '&lang=ru' + '&appid=' + process.env.REACT_APP_OPEN_WEATHER_TOKEN;
+    config.url = config.url + '&appid=' + process.env.REACT_APP_OPEN_WEATHER_TOKEN;
     return config;
 });
 

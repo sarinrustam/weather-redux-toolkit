@@ -52,11 +52,11 @@ const Header: FunctionComponent<Props> = () => {
                 >
                     <GlobalSvgSelector id='change-theme' />
                 </div>
-                <Select
+                {/* <Select
                     styles={colorStyles}
                     defaultValue={options[0]}
                     options={options}
-                />
+                /> */}
             </div>
         </header>
     )
